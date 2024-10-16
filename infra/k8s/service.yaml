@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618-srv
+spec:
+  selector:
+    app: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9003
+  type: LoadBalancer

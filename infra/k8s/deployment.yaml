@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618-depl
+  labels:
+    app: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+  template:
+    metadata:
+      labels:
+        app: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+    spec:
+      containers:
+        - name: ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:ruloans-customer-api-coll-f7c4faa33fb14a139fa567d9f68fc618
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9003
